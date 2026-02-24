@@ -15,25 +15,24 @@
         .card:last-child { border-bottom: none; }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 min-h-screen">
 
-    
    
-    <header class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header>
         <h1 class="pt-8 sm:pt-10 text-2xl sm:text-3xl font-bold text-[#002c5c]">Job Application Tracker</h1>
 
         
         <div class="pt-6 sm:pt-8 grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
-            <div >
-                <p class="pt-5 text-[#323b49FF] font-medium">Total</p>
-                <p class="text-[24px] text-[#002c5cFF] font-bold " id="total">0</p>
-            </div>
             <div>
-                <p class="pt-5 text-[14px] text-[#323b49FF] font-medium">Interview</p>
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">Total</p>
+                <p class="text-xl sm:text-2xl text-[#002c5c] font-bold mt-1" id="total">0</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100">
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">Interview</p>
                 <p class="text-xl sm:text-2xl text-emerald-500 font-bold mt-1" id="interviewCount">0</p>
             </div>
-            <div>
-                <p class="pt-5 text-[14px] text-[#323b49FF] font-medium">Rejected</p>
+            <div class="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100">
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">Rejected</p>
                 <p class="text-xl sm:text-2xl text-red-500 font-bold mt-1" id="rejectedCount">0</p>
             </div>
         </div>
@@ -48,19 +47,20 @@
             <span class="text-sm text-slate-500" id="jobCountLabel">8 jobs</span>
         </div>
 
-        <!-- Filter tabs -->
+       
         <div class="flex gap-2 mb-6 flex-wrap">
-            <button onclick="toggleStyle('all-filter-btn')" class="bg-blue-400 text-white px-5 sm:px-8 py-2 rounded-lg text-sm font-medium " id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-blue-400 text-white px-5 sm:px-8 py-2 rounded-lg text-sm font-medium" id="all-filter-btn">All</button>
             <button onclick="toggleStyle('interview-filter-btn')" class="text-slate-500 px-5 sm:px-8 py-2 rounded-lg text-sm font-medium " id="interview-filter-btn">Interview</button>
-            <button onclick="toggleStyle('rejected-filter-btn')" class="text-slate-500 px-5 sm:px-8 py-2 rounded-lg text-sm font-medium" id="rejected-filter-btn">Rejected</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" class="text-slate-500 px-5 sm:px-8 py-2 rounded-lg text-sm font-medium " id="rejected-filter-btn">Rejected</button>
         </div>
 
         <!-- Card sections -->
-        <div >
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
             <section id="allCards">
 
                 <!-- card 1 -->
-                 
+
                 <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
                     <div class="flex-1 min-w-0">
                         <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">BrightPath Labs</h3>
@@ -98,7 +98,6 @@
                 </div>
 
                 <!-- card 3 -->
-
                 <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
                     <div class="flex-1 min-w-0">
                         <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">OrbitNest Labs</h3>
@@ -117,7 +116,6 @@
                 </div>
 
                 <!-- card 4 -->
-
                 <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
                     <div class="flex-1 min-w-0">
                         <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">ZenByte Solutions</h3>
@@ -136,7 +134,6 @@
                 </div>
 
                 <!-- card 5 -->
-
                 <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
                     <div class="flex-1 min-w-0">
                         <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">CodeHarbor Systems</h3>
@@ -155,8 +152,6 @@
                 </div>
 
                 <!-- card 6 -->
-
-
                 <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
                     <div class="flex-1 min-w-0">
                         <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">PixelTrail Innovations</h3>
@@ -175,7 +170,6 @@
                 </div>
 
                 <!-- card 7 -->
-
                 <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
                     <div class="flex-1 min-w-0">
                         <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">SkyForge Digital</h3>
@@ -194,7 +188,6 @@
                 </div>
 
                 <!-- card 8 -->
-
                 <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
                     <div class="flex-1 min-w-0">
                         <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">LunaStack Technologies</h3>
@@ -215,6 +208,8 @@
             </section>
         </div>
     </main>
-    <script src="script.js"></script>
+
+
+        <script src="script.js"></script>
 </body>
 </html>
