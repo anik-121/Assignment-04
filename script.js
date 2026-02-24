@@ -9,7 +9,7 @@ let total = document.getElementById("total");
         const allCards = document.getElementById("allCards");
         const cardContainer = allCards.closest(".bg-white");
 
-        // Create interview & rejected sections inside the same card container
+        
         const interviewCards = document.createElement("section");
         interviewCards.id = "interviewCards";
         interviewCards.classList.add("hidden");
@@ -77,10 +77,13 @@ let total = document.getElementById("total");
                 const card = this.closest(".card");
                 removeEmpty(interviewCards);
                 interviewCards.appendChild(card);
+
+
                 const statusBtn = card.querySelector(".not-applied-btn");
                 statusBtn.innerText = "INTERVIEW";
                 statusBtn.classList.remove("text-[#002c5c]");
                 statusBtn.classList.add("text-green-600");
+
                 card.querySelector(".interview-btn").disabled = true;
                 card.querySelector(".rejected-btn").disabled = true;
                 calculateCount();
@@ -91,12 +94,15 @@ let total = document.getElementById("total");
         document.querySelectorAll(".rejected-btn").forEach(btn => {
             btn.addEventListener("click", function () {
                 const card = this.closest(".card");
+
                 removeEmpty(rejectedCards);
                 rejectedCards.appendChild(card);
                 const statusBtn = card.querySelector(".not-applied-btn");
+
                 statusBtn.innerText = "REJECTED";
                 statusBtn.classList.remove("text-[#002c5c]");
                 statusBtn.classList.add("text-red-600");
+
                 card.querySelector(".interview-btn").disabled = true;
                 card.querySelector(".rejected-btn").disabled = true;
                 calculateCount();
@@ -107,6 +113,7 @@ let total = document.getElementById("total");
         document.querySelectorAll(".fa-trash-can").forEach(icon => {
             icon.addEventListener("click", function () {
                 const card = this.closest(".card");
+                
                 card.remove();
                 calculateCount();
                 checkEmpty(interviewCards, "interview");
