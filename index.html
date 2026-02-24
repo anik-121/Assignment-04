@@ -24,17 +24,197 @@
 
         
         <div class="pt-6 sm:pt-8 grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
-            <div class="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100">
-                <p class="text-xs sm:text-sm text-gray-500 font-medium">Total</p>
-                <p class="text-xl sm:text-2xl text-[#002c5c] font-bold mt-1" id="total">0</p>
+            <div >
+                <p class="pt-5 text-[#323b49FF] font-medium">Total</p>
+                <p class="text-[24px] text-[#002c5cFF] font-bold " id="total">0</p>
             </div>
-            <div class="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100">
-                <p class="text-xs sm:text-sm text-gray-500 font-medium">Interview</p>
+            <div>
+                <p class="pt-5 text-[14px] text-[#323b49FF] font-medium">Interview</p>
                 <p class="text-xl sm:text-2xl text-emerald-500 font-bold mt-1" id="interviewCount">0</p>
             </div>
-            <div class="bg-white rounded-xl p-4 sm:p-5 shadow-sm border border-gray-100">
-                <p class="text-xs sm:text-sm text-gray-500 font-medium">Rejected</p>
+            <div>
+                <p class="pt-5 text-[14px] text-[#323b49FF] font-medium">Rejected</p>
                 <p class="text-xl sm:text-2xl text-red-500 font-bold mt-1" id="rejectedCount">0</p>
             </div>
         </div>
     </header>
+
+    
+    <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+
+        
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center pt-8 sm:pt-10 pb-4 gap-1">
+            <h3 class="text-lg sm:text-xl font-bold text-[#002c5c]">Available Jobs</h3>
+            <span class="text-sm text-slate-500" id="jobCountLabel">8 jobs</span>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex gap-2 mb-6 flex-wrap">
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-blue-400 text-white px-5 sm:px-8 py-2 rounded-lg text-sm font-medium transition-all" id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" class="text-slate-500 px-5 sm:px-8 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-all" id="interview-filter-btn">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" class="text-slate-500 px-5 sm:px-8 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-all" id="rejected-filter-btn">Rejected</button>
+        </div>
+
+        <!-- Card sections -->
+        <div >
+            <section id="allCards">
+
+                <!-- card 1 -->
+                 
+                <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">BrightPath Labs</h3>
+                        <p class="text-sm sm:text-base text-slate-500 mt-1">Senior Frontend Developer</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-3">Remote • Full-time • $125,000 - $165,000</p>
+                        <button class="not-applied-btn mt-4 text-xs sm:text-sm font-semibold text-[#002c5c]">NOT APPLIED</button>
+                        <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Design and develop high-performance mobile apps for both Android and iOS platforms. Collaborate with UI/UX teams to deliver seamless user experiences.</p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <button class="interview-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-green-600 border border-green-600 bg-green-50 rounded-lg hover:bg-green-600 hover:text-white transition-all">INTERVIEW</button>
+                            <button class="rejected-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-red-600 border border-red-600 bg-red-50 rounded-lg hover:bg-red-600 hover:text-white transition-all">REJECTED</button>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-col items-start sm:items-end justify-end">
+                        <i class="fa-regular fa-trash-can text-slate-400 hover:text-red-500 cursor-pointer transition-colors text-base sm:text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+
+                <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">BluePeak Interactive</h3>
+                        <p class="text-sm sm:text-base text-slate-500 mt-1">Senior Mobile Engineer</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-3">Hybrid • Full-time • $145,000 - $185,000</p>
+                        <button class="not-applied-btn mt-4 text-xs sm:text-sm font-semibold text-[#002c5c]">NOT APPLIED</button>
+                        <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Lead development of scalable mobile applications, mentor junior engineers, and help define architecture for next-generation products.</p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <button class="interview-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-green-600 border border-green-600 bg-green-50 rounded-lg hover:bg-green-600 hover:text-white transition-all">INTERVIEW</button>
+                            <button class="rejected-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-red-600 border border-red-600 bg-red-50 rounded-lg hover:bg-red-600 hover:text-white transition-all">REJECTED</button>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-col items-start sm:items-end justify-end">
+                        <i class="fa-regular fa-trash-can text-slate-400 hover:text-red-500 cursor-pointer transition-colors text-base sm:text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+
+                <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">OrbitNest Labs</h3>
+                        <p class="text-sm sm:text-base text-slate-500 mt-1">Frontend Developer (React)</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-3">Remote • Full-time • $120,000 - $155,000</p>
+                        <button class="not-applied-btn mt-4 text-xs sm:text-sm font-semibold text-[#002c5c]">NOT APPLIED</button>
+                        <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Develop responsive and dynamic user interfaces using React. Work closely with backend teams to integrate APIs and optimize performance.</p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <button class="interview-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-green-600 border border-green-600 bg-green-50 rounded-lg hover:bg-green-600 hover:text-white transition-all">INTERVIEW</button>
+                            <button class="rejected-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-red-600 border border-red-600 bg-red-50 rounded-lg hover:bg-red-600 hover:text-white transition-all">REJECTED</button>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-col items-start sm:items-end justify-end">
+                        <i class="fa-regular fa-trash-can text-slate-400 hover:text-red-500 cursor-pointer transition-colors text-base sm:text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- card 4 -->
+
+                <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">ZenByte Solutions</h3>
+                        <p class="text-sm sm:text-base text-slate-500 mt-1">iOS Developer</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-3">On-site • Full-time • $125,000 - $160,000</p>
+                        <button class="not-applied-btn mt-4 text-xs sm:text-sm font-semibold text-[#002c5c]">NOT APPLIED</button>
+                        <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Build polished iOS applications using Swift and modern Apple frameworks. Focus on performance, accessibility, and clean architecture.</p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <button class="interview-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-green-600 border border-green-600 bg-green-50 rounded-lg hover:bg-green-600 hover:text-white transition-all">INTERVIEW</button>
+                            <button class="rejected-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-red-600 border border-red-600 bg-red-50 rounded-lg hover:bg-red-600 hover:text-white transition-all">REJECTED</button>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-col items-start sm:items-end justify-end">
+                        <i class="fa-regular fa-trash-can text-slate-400 hover:text-red-500 cursor-pointer transition-colors text-base sm:text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- card 5 -->
+
+                <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">CodeHarbor Systems</h3>
+                        <p class="text-sm sm:text-base text-slate-500 mt-1">Android Engineer</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-3">Remote • Full-time • $115,000 - $150,000</p>
+                        <button class="not-applied-btn mt-4 text-xs sm:text-sm font-semibold text-[#002c5c]">NOT APPLIED</button>
+                        <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Create robust Android applications using Kotlin. Improve app stability, implement new features, and enhance overall user experience.</p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <button class="interview-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-green-600 border border-green-600 bg-green-50 rounded-lg hover:bg-green-600 hover:text-white transition-all">INTERVIEW</button>
+                            <button class="rejected-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-red-600 border border-red-600 bg-red-50 rounded-lg hover:bg-red-600 hover:text-white transition-all">REJECTED</button>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-col items-start sm:items-end justify-end">
+                        <i class="fa-regular fa-trash-can text-slate-400 hover:text-red-500 cursor-pointer transition-colors text-base sm:text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- card 6 -->
+
+
+                <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">PixelTrail Innovations</h3>
+                        <p class="text-sm sm:text-base text-slate-500 mt-1">Full Stack Developer</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-3">Hybrid • Full-time • $135,000 - $175,000</p>
+                        <button class="not-applied-btn mt-4 text-xs sm:text-sm font-semibold text-[#002c5c]">NOT APPLIED</button>
+                        <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Develop and maintain scalable web applications across the full stack. Work with cloud infrastructure and modern JavaScript frameworks.</p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <button class="interview-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-green-600 border border-green-600 bg-green-50 rounded-lg hover:bg-green-600 hover:text-white transition-all">INTERVIEW</button>
+                            <button class="rejected-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-red-600 border border-red-600 bg-red-50 rounded-lg hover:bg-red-600 hover:text-white transition-all">REJECTED</button>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-col items-start sm:items-end justify-end">
+                        <i class="fa-regular fa-trash-can text-slate-400 hover:text-red-500 cursor-pointer transition-colors text-base sm:text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- card 7 -->
+
+                <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">SkyForge Digital</h3>
+                        <p class="text-sm sm:text-base text-slate-500 mt-1">Senior React Native Engineer</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-3">Remote • Full-time • $150,000 - $190,000</p>
+                        <button class="not-applied-btn mt-4 text-xs sm:text-sm font-semibold text-[#002c5c]">NOT APPLIED</button>
+                        <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Architect and implement complex mobile solutions while ensuring code quality, testing coverage, and CI/CD best practices.</p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <button class="interview-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-green-600 border border-green-600 bg-green-50 rounded-lg hover:bg-green-600 hover:text-white transition-all">INTERVIEW</button>
+                            <button class="rejected-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-red-600 border border-red-600 bg-red-50 rounded-lg hover:bg-red-600 hover:text-white transition-all">REJECTED</button>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-col items-start sm:items-end justify-end">
+                        <i class="fa-regular fa-trash-can text-slate-400 hover:text-red-500 cursor-pointer transition-colors text-base sm:text-lg"></i>
+                    </div>
+                </div>
+
+                <!-- card 8 -->
+
+                <div class="card flex flex-col sm:flex-row sm:justify-between p-5 sm:p-6 gap-4">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg font-bold text-[#002c5c]">LunaStack Technologies</h3>
+                        <p class="text-sm sm:text-base text-slate-500 mt-1">JavaScript Developer</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-3">Remote • Contract • $70/hr - $95/hr</p>
+                        <button class="not-applied-btn mt-4 text-xs sm:text-sm font-semibold text-[#002c5c]">NOT APPLIED</button>
+                        <p class="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">Build interactive web and mobile features using modern JavaScript. Optimize applications for speed, scalability, and reliability.</p>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <button class="interview-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-green-600 border border-green-600 bg-green-50 rounded-lg hover:bg-green-600 hover:text-white transition-all">INTERVIEW</button>
+                            <button class="rejected-btn px-3 sm:px-4 py-1.5 text-xs sm:text-sm font-medium text-red-600 border border-red-600 bg-red-50 rounded-lg hover:bg-red-600 hover:text-white transition-all">REJECTED</button>
+                        </div>
+                    </div>
+                    <div class="flex sm:flex-col items-start sm:items-end justify-end">
+                        <i class="fa-regular fa-trash-can text-slate-400 hover:text-red-500 cursor-pointer transition-colors text-base sm:text-lg"></i>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
